@@ -1,0 +1,9 @@
+{
+  "name": "coffee_dashboard",
+  "private": true,
+  "dependencies": {
+    "chart.js": "^2.9.3",
+    "chartkick": "^3.2.1",
+    "highcharts": "^8.2.0"
+  }
+}

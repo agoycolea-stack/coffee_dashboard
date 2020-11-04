@@ -1,0 +1,38 @@
+<h1>Dashboard Index</h1>
+
+<%= column_chart @sales_grouped_by_month,
+  title: "Sales grouped by month",
+  colors: ['black'],
+  library: {
+    tooltip: {
+      pointFormat: 'Times Bought: <b>{point.y}</b>'
+             }
+            }
+%>
+
+<%= column_chart @sales_counted_by_month,
+  title: "Number of sales by month",
+  colors: ['blue'],
+  library: {
+    tooltip: {
+      pointFormat: 'Times Bought: <b>{point.y}</b>'
+    }
+  } %>
+<%= column_chart @sales_prom_by_month,
+  title: "Average of sales by month",
+  colors: ['green'],
+  library: {
+    tooltip: {
+      pointFormat: 'Times Bought: <b>{point.y}</b>'
+    }
+  } %>
+
+<%= pie_chart @sales_origin_12_months %>
+<%= pie_chart @sales_origin_6_months %>
+<%= pie_chart @sales_origin_3_months %>
+<%= pie_chart @sales_origin_last_month %>
+
+<%= pie_chart @sales_blend_12_months %>
+<%= pie_chart @sales_blend_6_months %>
+<%= pie_chart @sales_blend_3_months %>
+<%= pie_chart @sales_blend_last_month %>
